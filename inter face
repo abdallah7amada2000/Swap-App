@@ -1,0 +1,101 @@
+background-color: rgb(41, 84, 153);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgb(214, 214, 214);\n"
+"gridline-color: rgb(255, 255, 255);"
+)
+        self.comboBox_Name2.setObjectName("comboBox")
+        self.comboBox_Name1 = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_Name1.setGeometry(QtCore.QRect(80, 120, 281, 41))
+        self.comboBox_Name1.setStyleSheet("background-color: rgb(41, 84, 153);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgb(214, 214, 214);\n"
+"gridline-color: rgb(255, 255, 255);")
+        
+        self.leadername = QtWidgets.QComboBox(self.centralwidget)
+        
+        self.leadername.addItems(
+            self.Name_leader[self.Name_leader[self.Name_leader.columns[1]]=="Admin"][self.Name_leader.columns[0]].to_list()
+        )
+        self.leadername.setGeometry(QtCore.QRect(80, 180, 281, 41))
+        self.leadername.setStyleSheet("background-color: rgb(41, 84, 153);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgb(214, 214, 214);\n"
+"gridline-color: rgb(255, 255, 255);")
+        self.labelLeader = QtWidgets.QLabel(self.centralwidget)
+        self.labelLeader.setText("Leader")
+        self.labelLeader.setGeometry(QtCore.QRect(10, 180, 55, 41))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.labelLeader.setFont(font)
+        self.labelLeader.setAlignment(QtCore.Qt.AlignCenter)
+
+        self.comboBox_day = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_day.setGeometry(QtCore.QRect(80, 230, 101, 41))
+        self.comboBox_day.setStyleSheet("background-color: rgb(41, 84, 153);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgb(214, 214, 214);\n"
+"gridline-color: rgb(255, 255, 255);")
+        self.comboBox_day.setObjectName("comboBox_3")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(10, 300, 151, 51))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.pushButton.setFont(font)
+        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+        self.pushButton.clicked.connect(self.send_mail)
+        self.pushButton.setStyleSheet("background-color: rgb(255, 29, 29);")
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.clicked.connect(self.save_swap)
+        self.pushButton_2.setGeometry(QtCore.QRect(240, 230, 161, 41)) #########################################
+        self.pushButton_2.setStyleSheet("background-color: rgb(41, 84, 153);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgb(214, 214, 214);\n"
+"gridline-color: rgb(255, 255, 255);")
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+
+        self.pushButton_3.clicked.connect(self.getFileDir)
+        self.pushButton_3.setGeometry(QtCore.QRect(270, 10, 111, 31))
+        self.pushButton_3.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+        self.pushButton_3.setStyleSheet("background-color: rgb(41, 84, 153);\n"
+"color: rgb(255, 255, 255);\n"
+"border-color: rgb(214, 214, 214);\n"
+"gridline-color: rgb(255, 255, 255);")
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(10, 10, 251, 31))
+        self.lineEdit.setStyleSheet("selection-background-color: rgb(149, 227, 221);")
+        self.lineEdit.setReadOnly(True)
+        self.lineEdit.setObjectName("lineEdit")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(10, 60, 55, 41))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.label.setFont(font)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(10, 120, 55, 41))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.label_2.setFont(font)
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(10, 230, 61, 41)) #############################
+        self.label_3.setMinimumSize(QtCore.QSize(0, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_3.setFont(font)
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(170, 310, 241, 31))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.label_4.setFont(font)
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.swapcount = 0
